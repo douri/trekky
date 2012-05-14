@@ -1,0 +1,1046 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family:arial;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color:#222222;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+	border:none;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+/* CSS TREKKY */
+
+/******************************************************************************/
+/************************************HEADER************************************/
+/******************************************************************************/
+#background_header_index{
+	height:152px;
+	background-image:url(header.jpg);
+	background-repeat:repeat-x;
+}
+
+#header_index{
+	height:152px;
+	width: 1035px;
+	margin:auto;
+	background:url(logo.jpg) no-repeat center 20px transparent;
+}
+
+.FBConnectButton_Simple, .FBConnectButton_RTL_Simple{
+	background:none !important;
+}
+
+/*************INFO MEMBRE************************/
+#header_index ul {
+  float: right;
+  margin-top: 10px;
+  width: 335px;
+}
+
+#header_index ul li{
+	float:right;
+	background-color: #393939;
+	padding:10px;
+}
+
+#header_index ul li.logout {
+  background-color: transparent;
+  height: 32px;
+}
+
+#reseaux {
+  position: relative;
+  top: 3px;
+  width: 210px;
+}
+
+.FBConnectButton_Simple .FBConnectButton_Text_Simple {
+  margin: 0 0 0 0px !important;
+  padding-bottom: 1px;
+}
+
+#header_index p.logo {
+  float: left;
+  margin-left: 124px;
+  width: 335px;
+}
+#header_index p.logo a{
+  display: block;
+  height: 141px;
+  width: 302px;
+}
+
+#header_index ul li a{
+	color:#ffffff;
+	font-size:12px;
+}
+
+#header_index ul li a.deconexion{
+	color:#868686;
+}
+
+#header_index ul li img{
+	width:33px;
+	height:29px;
+}
+
+/*****************RECHERCHE*******************/
+#travel_search {
+  float: right;
+  margin-top: 28px;
+}
+
+#travel_search img {
+  position: relative;
+  top: 8px;
+}
+
+#travel_search input,
+#user_pseudo,
+#user_password {
+  border: 1px solid #BEBEBE;
+  color: #818181;
+  font-size: 12px;
+  font-style: italic;
+  height: 21px;
+  padding: 1px 0 0 0;
+}
+
+#user_password {
+  margin-bottom:0px;
+}
+
+/******************************************************************************/
+/**************************************CONTENUE********************************/
+/******************************************************************************/
+#contenu {
+  background: url("background.jpg") repeat-y 0 0 transparent;
+  margin: auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+/******************************************************************************/
+/*********************************INDEX - NON CO*******************************/
+/******************************************************************************/
+#main_index {
+  background: url("background_index.png") no-repeat scroll center 0 transparent;
+  height: 374px;
+  margin: auto;
+  width: 1035px;
+}
+
+
+/*****************COLONNE GAUCHE*******************/
+
+#main_index_left {
+  float: left;
+  height: 316px;
+  padding: 18px 75px 40px 40px;
+  width: 628px;
+}
+
+.description_trek_du_jour{
+float:left;
+width:257px;
+height:263px;
+font-family:arial;
+font-size:14px;
+color:#a6a6a6;
+}
+
+.description{
+	margin-top:24px;
+}
+
+#main_index_left h1 {
+  border-bottom: 1px solid #A0A0A0;
+  color: #A6A6A6;
+  font-family: arial;
+  font-size: 24px;
+  margin-bottom: 17px;
+  padding-bottom: 5px;
+  padding-top: 13px;
+  width: 628px;
+}
+
+.img_trek_du_jour{
+width:336px;
+height:252px;
+float:left;
+margin-right:28px;
+}
+
+.img_trek_du_jour a{
+width:336px;
+height:252px;
+overflow:hidden;
+display:block;
+}
+
+.title_trek_du_jour{
+width:257px;
+margin-bottom:30px;
+}
+
+.title_trek_du_jour h2{
+font-family:arial;
+font-size:24px;
+color:#a6a6a6;
+}
+
+.title_trek_du_jour h3 a{
+font-family:arial;
+font-size:12px;
+color:#f58520;
+float:left;
+}
+
+.title_trek_du_jour_date {
+  float: right;
+  font-family: arial;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 2px;
+}
+
+.title_trek_du_jour_date span{
+color:#f58520;
+}
+
+#savoirplus{
+margin-top:7px;
+}
+
+#savoirplus a{
+font-family:arial;
+font-size:12px;
+color:#f58520;
+}
+
+/*****************COLONNE DROITE*******************/
+
+#main_index_right {
+  float: left;
+  height: 372px;
+  margin-left: 8px;
+  margin-top: 11px;
+  padding-left: 55px;
+  width: 197px;
+}
+
+#main_index_right_top{
+	height:219px;
+}
+
+#main_index_right_top form input#user_pseudo,
+#main_index_right_top form input#user_password{
+  margin-bottom:10px;
+}
+
+
+.h1_main_index_right_top{
+	margin-bottom:10px;
+}
+
+.h1_main_index_right_top h1{
+font-family:arial;
+font-size:24px;
+color:#a6a6a6;
+padding-top:24px;
+}
+
+.h1_main_index_right_top a,
+#main_index_right_top form a{
+font-family:arial;
+font-size:12px;
+color:#f58520;
+}
+
+#main_index_right_top form input:last-child,
+#travel_search input:last-child,
+#inscription form div.actions input,
+#motdepasse form div.actions input,
+#profil_col_gauche a,
+#contenu_profil table tr td.col_option a,
+#profil_col_droite .new_travel,
+#edit_profil form div.actions input,
+#edit_trek form div.actions input,
+#contenu_nouveau_trek form div.actions input,
+.flash_message div.flash div input,
+#contenu_activity h1 a,
+#contenu_activity .commentaire input{
+float:right;
+border:1px solid #dd6a00;
+color:#ffffff;
+font-size:13px;
+font-style:italic;
+margin-top: 18px;
+padding-bottom: 2px;
+padding-left: 2px;
+text-shadow: 1px 1px 2px #000000;
+cursor:pointer;
+height: 28px;
+/* Anciens navigateurs */
+background: #e16c01 url("gradient-bg.png") repeat-x top;
+-o-background-size: 100% 100%;
+-moz-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+background-size: 100% 100%;
+/* Navigateurs récents */
+background: -webkit-gradient(linear,left top, left bottom,from(#f99b07),to(#e16c01));
+background: -webkit-linear-gradient(top,#f99b07,#e16c01);
+background: -moz-linear-gradient(top,#f99b07,#e16c01);
+background: -o-linear-gradient(top,#f99b07,#e16c01);
+background: linear-gradient(top,#f99b07,#e16c01);
+}
+
+#main_index_right_top form input:last-child{
+  margin-top:5px;
+}
+
+#travel_search input:last-child {
+  height: 24px;
+  margin-left: 8px;
+  margin-top: 8px;
+  padding-bottom: 10px;
+  padding-right: 4px;
+}
+
+#main_index_right_top form input:last-child:hover,
+#travel_search input:last-child:hover,
+#inscription form div.actions input:hover,
+#motdepasse form div.actions input:hover,
+#profil_col_gauche a:hover,
+#contenu_profil table tr td.col_option a:hover,
+#profil_col_droite .new_travel:hover,
+#edit_profil form div.actions input:hover,
+#edit_trek form div.actions input:hover,
+#contenu_nouveau_trek form div.actions input:hover,
+.flash_message div.flash div input:hover,
+#contenu_activity h1 a:hover,
+#contenu_activity .commentaire input:hover{
+/* Anciens navigateurs */
+background: #f99b07 url("gradient-bg.png") repeat-x top;
+-o-background-size: 100% 100%;
+-moz-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+background-size: 100% 100%;
+/* Navigateurs récents */
+background: -webkit-gradient(linear,left top, left bottom,from(#e16c01),to(#f99b07));
+background: -webkit-linear-gradient(top,#e16c01,#f99b07);
+background: -moz-linear-gradient(top,#e16c01,#f99b07);
+background: -o-linear-gradient(top,#e16c01,#f99b07);
+background: linear-gradient(top,#e16c01,#f99b07);
+}
+
+#main_index_right_bottom {
+  background: url("btn_ajouter_trek_down.png") no-repeat scroll center 0 transparent;
+  height: 153px;
+  left: -53px;
+  margin-top: 5px;
+  position: relative;
+  width: 284px;
+}
+
+#main_index_right_bottom:hover {
+  background:url(btn_ajouter_trek_up.png) no-repeat center 0 transparent;
+}
+
+#main_index_right_bottom a {
+  display: block;
+  height: 36px;
+  width: 284px;
+  text-decoration:none !important;
+}
+
+#btn_ajouter {
+  color: #666666;
+  font-family: arial;
+  font-size: 18px;
+  padding-left: 27px;
+  padding-top: 23px;
+  text-transform: uppercase;
+}
+
+#btn_facilement {
+  color: white;
+  font-family: arial;
+  font-size: 14px;
+  padding-left: 56px;
+  padding-top: 7px;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+/******************************************************************************/
+/*********************************PAGE INSCRIPTION*****************************/
+/******************************************************************************/
+#inscription,
+#motdepasse,
+#search,
+#profil,
+#edit_profil,
+#edit_trek,
+#nouveau_trek{
+  background: url("fond_haut.png") no-repeat scroll 0 top transparent;
+  margin: 0 auto;
+  width: 900px;
+  padding-top:16px;
+
+}
+
+#contenu_inscription,
+#contenu_motdepasse,
+#contenu_edit_profil,
+#contenu_edit_trek,
+#contenu_profil,
+#contenu_search,
+#contenu_nouveau_trek{
+  background: url("fond_bas.png") no-repeat scroll 0 bottom transparent;
+  padding-bottom: 30px;
+}
+
+
+#inscription h1, 
+#motdepasse h1, 
+#contenu_search h1,
+#contenu_edit_profil h1,
+#contenu_edit_trek h1,
+#contenu_nouveau_trek h1{
+  border-bottom: 1px solid #F58520;
+  color: #F58520;
+  font-size: 24px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  width: 770px;
+}
+
+#inscription form,
+#motdepasse form,
+#edit_profil form,
+#edit_trek form, 
+#contenu_nouveau_trek form{
+  margin-left: 210px;
+  width: 378px;
+}
+
+#inscription form label,
+#motdepasse form label,
+#edit_profil form label,
+#edit_trek form label,
+#contenu_nouveau_trek form label {
+  color: #6F7575;
+  display: block;
+  float: left;
+  font-size: 14px;
+  padding-top: 6px;
+  text-align: right;
+  width: 150px;
+}
+
+#inscription form input,
+#motdepasse form input,
+#edit_profil form input,
+#edit_trek form input,
+#contenu_nouveau_trek form input {
+  border: 1px solid #BEBEBE;
+  color: #818181;
+  font-size: 12px;
+  font-style: italic;
+  height: 21px;
+  margin-left: 10px;
+  padding: 2px;
+  width: 212px;
+}
+
+#inscription form div,
+#motdepasse form div,
+#edit_profil form div,
+#edit_trek form div,
+#contenu_nouveau_trek form div{
+  margin-bottom: 10px;
+}
+
+#inscription form div.actions input,
+#motdepasse form div.actions input,
+#edit_profil form div.actions input,
+#edit_trek form div.actions input,
+#contenu_nouveau_trek form div.actions input {
+  font-size: 16px;
+  height: 28px;
+  padding-bottom: 5px;
+  width: 100px;
+  text-align:center;
+}
+
+#motdepasse form div.actions input {
+  font-size: 13px;
+  margin-top: 2px;
+  width: 174px;
+}
+
+#edit_trek form div.actions input,
+#contenu_nouveau_trek form div.actions input{
+  width:150px;
+}
+
+/******************************************************************************/
+/*********************************PAGE RECHERCHE*******************************/
+/******************************************************************************/
+#contenu_search table,
+.pagination {
+  margin: 0 auto;
+  width: 630px;
+}
+
+.pagination{
+	margin-top:10px;
+	color: #A6A6A6;
+	font-size:12px;
+}
+
+.pagination a{
+	color: #F58520;
+}
+
+#contenu_search table tr,
+#contenu_profil table tr{
+  border-bottom:1px dashed #b2b2b2;
+}
+
+#contenu_search table tr td,
+#contenu_profil table tr td{
+	vertical-align:top;
+	padding-top:10px;
+	padding-bottom:10px;
+	color: #A6A6A6;
+	font-size: 14px;
+}
+
+#contenu_search table tr td:last-child{
+	text-align:right;
+}
+
+#contenu_search table tr td h2 a, 
+#contenu_profil table tr td h3 a {
+  color: #A0A0A0;
+  display: block;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+#contenu_search table tr td a,
+#contenu_profil table tr td a{
+	color: #F58520;
+    font-family: arial;
+    font-size: 12px;
+}
+
+#contenu_search table tr td p span,
+#contenu_profil table tr td p span{
+	color: #F58520;
+}
+
+#contenu_search table tr td.col_photo,
+#contenu_profil table tr td.col_photo{
+	width:110px;
+}
+
+#contenu_search table tr td.col_photo a,
+#contenu_profil table tr td.col_photo a{
+	width:100px;
+	height:76px;
+	display:block;
+	overflow: hidden;
+}
+
+/******************************************************************************/
+/*********************************PAGE PROFIL**********************************/
+/******************************************************************************/
+#profil h1{
+	font-size:24px;
+	color:#f58520;
+	border-bottom:1px solid #f58520;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	width: 770px;
+}
+
+#profil h2{
+	font-size:24px;
+	color:#a0a0a0;
+	border-bottom:1px solid #a0a0a0;
+	margin-bottom:10px;
+}
+
+#profil_col_gauche {
+  float: left;
+  margin-left: 66px;
+  width: 145px;
+}
+
+#profil_col_gauche img{
+  max-width:145px;
+  width:145px;
+}
+
+#profil_col_gauche a,
+#profil_col_droite .new_travel {
+  display: block;
+  height: 15px;
+  margin-top: 5px;
+  padding-top: 3px;
+  text-align: center;
+  width: 60px;
+}
+
+#profil_col_droite .new_travel {
+  width: 100px;
+}
+
+#profil_col_gauche a:hover,
+#contenu_profil table tr td.col_option a:hover,
+#profil_col_droite .new_travel:hover{
+	text-decoration:none;
+}
+
+#profil_col_droite {
+  float: left;
+  margin-left: 80px;
+  width: 544px;
+}
+
+#contenu_profil table{
+	position:relative;
+	top:-10px;
+  width: 544px;
+}
+
+#contenu_profil table tr td.col_desc {
+  width: 350px;
+}
+
+#contenu_profil table tr td.col_desc p{
+	margin-bottom:5px;
+}
+
+#contenu_profil table tr td.col_option a{
+	display: block;
+  height: 15px;
+  margin-top: 5px;
+  padding-top: 3px;
+  text-align: center;
+  width: 80px;
+}
+
+#contenu_profil table tr td.col_option a:last-child {
+	/* Anciens navigateurs */
+	background: #a20d06 url("gradient-bg.png") repeat-x top;
+	-o-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	/* Navigateurs récents */
+	background: -webkit-gradient(linear,left top, left bottom,from(#dc5308),to(#a20d06));
+	background: -webkit-linear-gradient(top,#dc5308,#a20d06);
+	background: -moz-linear-gradient(top,#dc5308,#a20d06);
+	background: -o-linear-gradient(top,#dc5308,#a20d06);
+	background: linear-gradient(top,#dc5308,#a20d06);
+}
+
+#contenu_profil table tr td.col_option a:last-child:hover {
+	/* Anciens navigateurs */
+	background: #dc5308 url("gradient-bg.png") repeat-x top;
+	-o-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	/* Navigateurs récents */
+	background: -webkit-gradient(linear,left top, left bottom,from(#a20d06),to(#dc5308));
+	background: -webkit-linear-gradient(top,#a20d06,#dc5308);
+	background: -moz-linear-gradient(top,#a20d06,#dc5308);
+	background: -o-linear-gradient(top,#a20d06,#dc5308);
+	background: linear-gradient(top,#a20d06,#dc5308);
+}
+
+#edit_profil form i {
+  display: block;
+  font-size: 10px;
+  font-style: italic;
+  text-align: right;
+  color:#F58520;
+}
+
+#edit_profil .suppr_compte{
+  font-size: 12px;
+  left: 345px;
+  position: relative;
+  top: 59px;
+  color:#6F7575;
+}
+
+.retour {
+  color: #F58520;
+  font-size: 12px;
+  left: 325px;
+  position: relative;
+  top: 22px;
+}
+
+#edit_profil .suppr_compte a{
+  color:#F58520;
+}
+
+#profil .reseaux {
+  margin-bottom: 11px;
+  margin-left: 66px;
+  margin-top: -14px;
+}
+
+/******************************************************************************/
+/************************************ACTIVITY**********************************/
+/******************************************************************************/
+#view_activity{
+  width:900px;
+  margin: 0 auto;
+}
+#trek {
+  background: url("fond_trek.png") no-repeat scroll 0 top transparent;
+  float: left;
+  height: 377px;
+  padding-left: 14px;
+  padding-right: 11px;
+  width: 123px;
+  font-size: 12px;
+  color: #A0A0A0;
+}
+
+#trek img.image-trek {
+  margin-top: 29px;
+  width: 115px;
+}
+
+#trek h1 {
+  color: #A0A0A0;
+  font-weight: bold;
+  margin-top: 14px;
+  text-transform: uppercase;
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+#trek a,
+#trek span {
+  color: #f58520;
+  font-size: 12px;
+}
+
+#activity {
+  background: url("fond_bas_trek.png") no-repeat scroll 4px bottom transparent;
+  float: left;
+  width: 752px;
+}
+
+#contenu_activity {
+  background: url("fond_haut_trek.png") no-repeat scroll 0 top transparent;
+  padding-bottom: 30px;
+  padding-left: 60px;
+}
+
+
+#contenu_activity h1 {
+  border-bottom: 1px solid #F58520;
+  color: #F58520;
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  width: 637px;
+}
+
+#contenu_activity .reseaux {
+  margin-bottom: 10px;
+}
+
+#contenu_activity h1 a {
+  float: none;
+  font-size: 12px;
+  margin: 0;
+  padding: 3px 8px 4px 6px;
+  position: relative;
+  text-align: right;
+  top: -7px;
+}
+
+#contenu_activity h1{
+  height:26px;
+}
+
+#contenu_activity h1 .name{
+  display:block;
+  float:left;
+}
+
+#contenu_activity h1 .type {
+  background: url("fond_type.jpg") no-repeat scroll 0 0 transparent;
+  color: #FFFFFF;
+  display: block;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 3px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 83px;
+}
+
+#contenu_activity h1 a:hover {
+  text-decoration:none;
+}
+
+#contenu_activity h1 .edit {
+  float: right;
+  margin-right: 6px;
+}
+
+#contenu_activity h1 .back {
+  margin-right: 0;
+  float:right;
+}
+
+#contenu_activity .col_image {
+  float: left;
+  width: 270px;
+}
+
+#contenu_activity .col_image img{
+  width: 270px;
+}
+
+#contenu_activity .col_description_activity {
+  float: left;
+  margin-left: 40px;
+  width: 313px;
+  color:#a0a0a0;
+  font-size:12px;
+}
+
+#contenu_activity .col_description_activity p{
+  margin-bottom:10px;
+}
+
+#contenu_activity .col_description_activity p span{
+  color:#f58520;
+}
+
+#contenu_activity .col_description_activity p.debut,
+#contenu_activity .col_description_activity p.lieu,
+#contenu_activity .col_description_activity p.description_activity{
+  float:left;
+}
+
+#contenu_activity .col_description_activity p.description_activity{
+  line-height:15px;
+}
+
+#contenu_activity .col_description_activity p.fin,
+#contenu_activity .col_description_activity p.cout{
+  float:right;
+}
+
+
+#contenu_activity .commentaire {
+  width: 637px;
+}
+
+#contenu_activity .commentaire h1 {
+  background: url("commentaires.jpg") no-repeat scroll 0 0 transparent;
+  font-size: 15px;
+  font-weight: bold;
+  height: 16px;
+  margin-top: 30px;
+  padding-left: 22px;
+  padding-top: 0;
+  text-transform: uppercase;
+  width:615px;
+}
+
+#contenu_activity .commentaire textarea{
+  width:631px;
+}
+
+/******************************************************************************/
+/**************************************FOOTER**********************************/
+/******************************************************************************/
+#footer{
+	height:222px;
+	margin:auto;
+	background-image:url(footer_index.jpg);
+	background-repeat:repeat-x;
+}
+
+#footer .derniers{
+width:1040px;
+height:222px;
+margin-left: auto;
+margin-right: auto;
+}
+
+#footer h1{
+font-family:arial;
+font-size:24px;
+color:#fff;
+width:1040px;
+padding-top:25px;
+padding-bottom:10px;
+border-bottom: 1px solid #898989;
+
+}
+
+#derniers_slider{
+clear:both;
+width:1040px;
+height:135px;
+padding-top:20px;
+}
+
+.derniers_slider_event{
+width:154px;
+float:left;
+padding-left:23px;
+}
+
+.derniers_slider_event:nth-child(1){
+padding-left:0px;
+}
+
+.derniers_slider_event_img{
+width:154px;
+height:75px;
+float:left;
+padding-bottom:5px;
+margin-bottom:8px;
+border-bottom: 1px solid #898989;
+}
+
+.derniers_slider_event_img a{
+width:154px;
+height:75px;
+display:block;
+overflow: hidden;
+}
+
+.derniers_slider_event_texte .pays{
+clear:both;
+font-family:arial;
+font-size:14px;
+color:#fff;
+float:left;
+}
+
+.derniers_slider_event_texte .name a{
+font-family:arial;
+font-size:10px;
+color:#f58520;
+float:right;
+padding-top:2px;
+}
+
+.spacer {
+  clear: both;
+}
+
+.flash_message div.flash {
+  background: url("fond-messenger.png") repeat scroll 0 0 transparent;
+  color: #FFFFFF;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+.flash_message div.flash div {
+  background-color: #f9f9f9;
+  border-radius: 10px 10px 10px 10px;
+  color: #A6A6A6;
+  font-family: arial;
+  font-size: 24px;
+  margin: 230px auto auto;
+  padding: 10px 40px 23px;
+  width: 290px;
+}
+
+.flash_message div.flash div h1 {
+  border-bottom: 1px solid #F58520;
+  color: #F58520;
+  font-size: 24px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 13px;
+}
+
+.flash_message div.flash div input {
+  cursor: pointer;
+  display: block;
+  float: none;
+  height: 17px;
+  margin-left: auto;
+  margin-top: 20px;
+  padding: 5px 3px 5px 0;
+  text-align: center;
+  width: 40px;
+}

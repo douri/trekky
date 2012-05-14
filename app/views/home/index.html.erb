@@ -1,0 +1,62 @@
+<div id="main_index">
+	<div id="main_index_left">
+			<h1>Le trek du jour</h1>
+
+			<% if !@last_activity.nil? %>
+				<div class="img_trek_du_jour">
+					<%= link_to (image_tag @last_activity.travel.illustration.url(:medium)), travel_activities_path(@last_activity.travel) %>
+				</div>
+				<div class="description_trek_du_jour">
+					<div class="title_trek_du_jour">
+						<p class="title_trek_du_jour_date">
+							Du <span><%= @last_activity.travel.start_travel %></span><br/>
+							Au <span><%= @last_activity.travel.end_travel %></span>
+						</p>
+						<h2><%= @last_activity.travel.name %></h2>
+
+						<h3><%= link_to "Par "+@last_activity.travel.user.pseudo, @last_activity.travel.user%></h3>
+						<div class="description">
+							<p><%= truncate(@last_activity.description, :length => 450) %></p>
+							<p id="savoirplus"><%= link_to "Savoir plus", travel_activities_path(@last_activity.travel)%></p>
+						</div>
+					</div>
+				</div>
+			<% else %>
+				Pas de trek du jour !
+			<% end %>
+	</div>
+
+	<div id="main_index_right">
+		<div id="main_index_right_top">
+			<div class="h1_main_index_right_top">
+				<h1>Connectes-toi</h1>
+				<%= link_to "(ou inscris-toi maintenant !)", new_user_registration_url %>
+			</div>
+			<%= form_for("user", :url => user_session_path) do |f| %>
+				<%= hidden_field_tag "provenance", "home" %>
+				<%= f.text_field :pseudo, :value => "Pseudo" %><br/>
+				<%= f.password_field :password, :value => "Mot de passe" %><br/>
+				<!--<%= f.check_box :remember_me %>
+				<%= f.label :remember_me %>-->
+				<%= link_to "Mot de passe oublié ?", new_password_path('user') %><br/>
+				<%= f.submit 'Connexion' %>
+			<% end %>
+		</div>
+
+		<div id="reseaux">
+                    <a class="facebook" name="fb_share" type="icon_link" share_url="<%= request.url %>"><%= image_tag("partage-facebook.png") %></a>
+                    <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= request.url %>" data-lang="fr">Tweeter</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+
+		<div id="main_index_right_bottom">
+
+			<%= link_to "Ajouter un trek", new_travel_url, :id => "btn_ajouter" %>
+			<div id="btn_facilement">Facilement et Rapidement</div>
+		</div>
+	</div>
+
+	
+</div>
+

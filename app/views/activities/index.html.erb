@@ -1,0 +1,77 @@
+<h1>Infos sur le voyage</h1>
+
+<p>
+  <b>Name du voyage:</b>
+  <%= @travel.name %>
+</p>
+
+<p>
+  <b>Start country:</b>
+  <%= @travel.start_country %>
+</p>
+
+<p>
+  <b>End country:</b>
+  <%= @travel.end_country %>
+</p>
+
+<p>
+  <b>Start travel:</b>
+  <%= @travel.start_travel %>
+</p>
+
+<p>
+  <b>End travel:</b>
+  <%= @travel.end_travel %>
+</p>
+
+<hr/>
+
+<h1>Listing activities</h1>
+<% if @activities.count > 0 %>
+  <table>
+    <tr>
+      <th>Travel</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Lieu</th>
+      <th>Cost activity</th>
+      <th>Start activity</th>
+      <th>End activity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  <% @activities.each do |activity| %>
+    <tr>
+      <td><%= activity.travel_id %></td>
+      <td><%= activity.name %></td>
+      <td><%= activity.description %></td>
+      <td><%= activity.activity_type %></td>
+      <td><%= activity.lieu %></td>
+      <td><%= activity.cost_activity %></td>
+      <td><%= activity.start_activity %></td>
+      <td><%= activity.end_activity %></td>
+      <td>
+          <% @testP = Picture.find(:first, :conditions => [ "activity_id = ?", activity.id ]) %>
+          <% if !@testP.nil? %>
+            <%= image_tag @testP.picture.url(:thumb) %>
+          <% end %>
+      </td>
+      <td><%= link_to 'Show', travel_activity_path(activity.travel_id, activity) %></td>
+      <td><%= link_to 'Edit', edit_travel_activity_path(activity.travel_id, activity) if can? :manage, activity %></td>
+      <td><%= link_to 'Destroy', travel_activity_path(activity.travel_id, activity), confirm: 'Etes-vous sûre de vouloir supprimer cette activité ?', method: :delete if can? :manage, activity %></td>
+
+    </tr>
+  <% end %>
+  </table>
+<% else %>
+  Pas d'activites encore !
+<% end %>
+
+<br />
+
+<%= link_to 'New Activity', new_travel_activity_path(@travel) if can? :manage, @travel %>

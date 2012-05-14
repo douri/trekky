@@ -1,0 +1,41 @@
+<%= form_for(@travel) do |f| %>
+  <% if @travel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@travel.errors.count, "erreur") %> ont été rencontrée(s) dans votre formulaire d'ajout de trek :</h2>
+
+      <ul>
+      <% @travel.errors.values.each do |msg| %>
+        <li><%= msg.first %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label for="travel_name">Nom du trek</label>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <label for="travel_start_country">Pays de départ</label>
+    <%= f.text_field :start_country %>
+  </div>
+  <div class="field">
+    <label for="travel_end_country">Pays d'arrivé</label>
+    <%= f.text_field :end_country %>
+  </div>
+  <div class="field">
+    <label for="travel_start_travel">Date de début</label>
+    <%= f.text_field :start_travel, :class => 'date_picker' %>
+  </div>
+  <div class="field">
+    <label for="travel_end_travel">Date de fin</label>
+    <%= f.text_field :end_travel, :class => 'date_picker' %>
+  </div>
+  <div>
+    <%= f.label :illustration %>
+    <%= f.file_field :illustration %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Enregistrer"%>
+  </div>
+<% end %>

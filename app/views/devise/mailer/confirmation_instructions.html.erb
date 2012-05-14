@@ -1,0 +1,11 @@
+<%= image_tag("mail/bandeau_mail.jpg") %>
+
+<p>Bienvenu <%= @resource.pseudo %>!</p>
+
+<p>Vous venez de vous inscrire sur le site <%= link_to 'trekky.fr', root_url %>,<br/>afin de confirmer votre inscription merci de cliquer sur le lien suivant</p>
+
+<p><%= link_to 'Confirmer mon inscription', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+
+<p>Merci de vous être inscrit !</p>
+
+<%= image_tag("mail/footer_mail.jpg") %>

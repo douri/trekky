@@ -1,0 +1,51 @@
+<div id="profil">
+	<div id="contenu_profil">
+		<h1>Fiche de <%= @user.pseudo %></h1>
+		<div class="reseaux">
+                <a class="facebook" name="fb_share" type="icon_link" share_url="<%= request.url %>"><%= image_tag("partage-facebook.png") %></a>
+                <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= request.url %>" data-lang="fr">Tweeter</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+
+		<div id="profil_col_gauche">
+			<h2>Profil</h2>
+			<%= image_tag @user.avatar.url(:medium) %>
+			<%= link_to 'Editer', edit_user_registration_url %>
+		</div>
+
+		<div id="profil_col_droite">
+			<h2>Ses Treks</h2>
+		
+
+			<% if @travels.count > 0 %>
+				<table>
+					<% @travels.each do |travel| %>
+					<tr>
+						<td class="col_photo"><%= link_to (image_tag travel.illustration.url(:thumb)), travel_activities_path(travel) %></td>
+						<td class="col_desc"><h3><%= link_to travel.name, travel_activities_path(travel) %></h3>
+							<p>Du <span><%= travel.start_travel %></span> Au <span><%= travel.end_travel %></span></p>
+							Départ : <%= travel.start_country %> <br/>
+							Arrivée : <%= travel.end_country %>
+						</td>
+						<!--<td><%= link_to 'Show', travel %></td>
+						<td><%= link_to 'Show activities', travel_activities_path(travel) %></td>-->					
+						<td class="col_option"><%= link_to 'Editer', edit_travel_path(travel) if can? :manage, travel %><br/>
+							<%= link_to '+ Activité', new_travel_activity_path(travel) if can? :manage, travel %><br/>
+							<%= link_to 'Supprimer', travel, confirm: 'Etes-vous sûre de vouloir supprimer ce trek ?', method: :delete if can? :manage, travel %></td>					
+					</tr>
+					<% end %>
+				</table>
+			<% else %> 
+				Il n'y a pas de voyages
+			<% end %>
+
+			<br />
+
+			<%= link_to 'Nouveau Trek', new_travel_path, :class => "new_travel" %>
+		</div>
+		<div class="spacer"></div>
+
+
+	</div>
+</div>

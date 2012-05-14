@@ -1,0 +1,44 @@
+<%= form_for([@travel, @activity]) do |f| %>
+  <% if @activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity.errors.count, "erreur") %> ont été rencontrée(s) dans votre formulaire de modification d'une activité :</h2>
+
+      <ul>
+      <% @activity.errors.values.each do |msg| %>
+        <li><%= msg.first %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_type %><br />
+    <%= f.select(:activity_type, ["Loisir","Déplacement","Hébergement"] ) %>
+  </div>
+  <div class="field">
+    <%= f.label :lieu %><br />
+    <%= f.text_field :lieu %>
+  </div>
+  <div class="field">
+    <%= f.label :cost_activity %><br />
+    <%= f.text_field :cost_activity %>
+  </div>
+  <div class="field">
+    <%= f.label :start_activity %><br />
+    <%= f.text_field :start_activity, :class => 'datetime_picker' %>
+  </div>
+  <div class="field">
+    <%= f.label :end_activity %><br />
+    <%= f.text_field :end_activity, :class => 'datetime_picker' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Modifier"%>
+  </div>
+<% end %>

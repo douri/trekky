@@ -1,0 +1,17 @@
+<div id="motdepasse">
+	<div id="contenu_motdepasse">
+		<h1>Mot de passe oublié ?</h1>
+
+		<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+		  <%= devise_error_messages! %>
+
+		  <div><%= f.label :email %>
+		  <%= f.email_field :email %></div>
+
+		  <div class="actions"><%= f.submit "M'envoyer les instructions" %></div>
+		<% end %>
+
+		<!--<%= render "links" %>-->
+		<div class="spacer"></div>
+	</div>
+</div>

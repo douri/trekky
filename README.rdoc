@@ -1,0 +1,28 @@
+HEROKU
+
+Ne pas oublier d'installer le gem heroku
+sites/trekky/gem install heroku
+
+> dans console
+sites/trekky/dir
+
+> dans gemfile 
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
+supprimer le fichier Gemfile.lock
+
+> dans console
+sites/trekky/bundle install --without production
+
+sites/trekky/git status
+
+sites/trekky/heroku login
+sites/trekky/heroku create --stack cedar
+sites/trekky/git push heroku master
+sites/trekky/heroku run rake db:migrate
